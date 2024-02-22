@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="no" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Norges Seilforbund Portal</title>
+
+    <style>
+
+      * {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      :root {
+        --blue: #211e50;
+        --red: #df1e2d;
+        --white: #ffffff;
+        --black: #000000;
+      }
+
+      body {
+        background: var(--blue);
+      }
+
+      #pageWrapper {
+        width: 100%;
+        max-width: 2560px;
+        margin: 0 auto;
+        min-height: calc(100vh - 100px);
+        overflow: hidden;
+      }
+
+      nav {
+        padding: 1rem 2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .nav-logo {
+        width: 120px;
+        max-width: 100%;
+      }
+
+      .contact-btn {
+        cursor: pointer;
+        font-size: 1rem;
+        padding: 1rem 2rem;
+        color: var(--black);
+        background: var(--white);
+        border: 2px solid var(--white);
+        border-radius: 200px;
+      }
+
+      main {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding: calc(35vh - 132px) 6rem;
+      }
+
+      main h1 {
+        font-size: 5vw;
+        line-height: 1.2;
+        text-align: center;
+        color: var(--white);
+      }
+
+      main p {
+        color: var(--white);
+        text-align: center;
+        margin-top: 1.5rem;
+        font-size: 1.4rem;
+        line-height: 1.2;
+        padding: 1rem 2rem;
+        background: var(--red);
+        border-radius: 200px;
+      }
+
+      .text-nowrap {
+        white-space: nowrap;
+      }
+
+      .wave-wrapper {
+        width: 100%;
+        max-width: 100vw;
+        overflow: hidden;
+        position: relative;
+        bottom: -5px;
+      }
+
+      .wave-container {
+        display: flex;
+        align-items: stretch;
+        justify-content: start;
+        gap: 0px;
+        width: 400vw;
+        animation: 20s linear waves infinite;
+      }
+
+      #secondWave {
+        position: relative;
+        left: -1px;
+      }
+
+      @keyframes waves {
+        0% {transform: translateX(0vw);}
+        100% {transform: translateX(-200vw);}
+      }
+
+      footer {
+        max-width: 100vw;
+        overflow: hidden;
+        background: var(--white);
+      }
+
+      .footer-container {
+        max-width: 100rem;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 4rem;
+        margin: 0 auto;
+        padding: 4rem 6rem;
+      }
+
+      .footer-logo {
+        width: 200px;
+        max-width: 100%;
+      }
+
+      .footer-contact-info {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        text-decoration: none;
+        font-size: 1.5rem;
+        color: var(--blue);
+      }
+
+      .footer-contact-icon {
+        height: 1.8rem;
+      }
+
+
+      /* Tablet Optimization */
+
+      @media only screen and (max-width: 991px) {
+
+        main {
+          padding: calc(35vh - 132px) 2rem;
+        }
+
+        main h1 {
+          font-size: 8vw;
+        }
+
+        .footer-container {
+          padding: 4rem;
+          grid-gap: 2rem;
+          grid-template-columns: 1fr;
+        }
+
+        .footer-logo-link {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin-bottom: 2rem;
+        }
+
+        .footer-contact-info .mail {
+          justify-content: start;
+        }
+
+        .footer-contact-info .phone {
+          justify-content: end;
+        }
+
+      }
+
+    </style>
+
+  </head>
+
+  <body>
+
+    <section id="pageWrapper">
+
+      <nav>
+        <a href="https://www.norgesseilforbund.org/">
+          <img class="nav-logo" src="logo-white.png"/>
+        </a>
+        <a href="#footerSection">
+          <button href="vg.no" class="contact-btn">Kontakt</button>
+        </a>
+      </nav>
+
+      <main>
+        <h1>Vi jobber med ny versjon 🚀 <span class="text-nowrap">Straks tilbake!</span></h1>
+        <p class="text-nowrap">Ny versjon av portalen vil være klar i uke 9</p>
+      </main>
+
+    </section>
+
+    <div class="wave-wrapper">
+      <div class="wave-container" id="waveContainer">
+        <svg xmlns="http://www.w3.org/2000/svg" width="200vw" viewBox="0 0 13903.997 165.638"><path d="M7343,6305.886h-6952s0,76.629,0,165.638c387.163,0,554.913-60.643,1390.19-60.643,537.042,0,1031.639,60.643,2030.907,60.643s1116.075-60.643,1998.8-60.643,1125.614,60.642,1532.1,60.643h0c387.162,0,554.912-60.643,1390.19-60.643,537.042,0,1031.639,60.643,2030.906,60.643s1116.075-60.643,1998.8-60.643,1125.613,60.643,1532.1,60.643V6305.886Z" transform="translate(14295.002 6471.524) rotate(180)" fill="var(--white)"/></svg>
+        <svg id="secondWave" xmlns="http://www.w3.org/2000/svg" width="200vw" viewBox="0 0 13903.997 165.638"><path d="M7343,6305.886h-6952s0,76.629,0,165.638c387.163,0,554.913-60.643,1390.19-60.643,537.042,0,1031.639,60.643,2030.907,60.643s1116.075-60.643,1998.8-60.643,1125.614,60.642,1532.1,60.643h0c387.162,0,554.912-60.643,1390.19-60.643,537.042,0,1031.639,60.643,2030.906,60.643s1116.075-60.643,1998.8-60.643,1125.613,60.643,1532.1,60.643V6305.886Z" transform="translate(14295.002 6471.524) rotate(180)" fill="var(--white)"/></svg>
+      </div>
+    </div>
+
+    <footer id="footerSection">
+      <div class="footer-container">
+        <a class="footer-logo-link" href="https://www.norgesseilforbund.org/">
+          <img class="footer-logo" src="logo.png"/>
+        </a>
+        <a class="footer-contact-info mail" href="mailto:seiling@nif.idrett.no">
+          <img class="footer-contact-icon" src="mail.svg"/>
+          <div class="footer-contact-text text-nowrap">seiling@nif.idrett.no</div>
+        </a>
+        <a class="footer-contact-info phone" href="tel:+4721029000">
+          <img class="footer-contact-icon" src="phone.svg"/>
+          <div class="footer-contact-text text-nowrap">+47 21 02 90 00</div>
+        </a>
+      </div>
+    </footer>
+
+  </body>
+
+</html>
